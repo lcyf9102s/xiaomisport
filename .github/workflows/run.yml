@@ -5,10 +5,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  schedule:
-    - cron: 35 6 * * *
+  repository_dispatch:
+    types:
+      - webhook-1
   watch:
     types: started
+  
 
 jobs:
   build:
